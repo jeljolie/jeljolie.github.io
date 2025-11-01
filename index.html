@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JJH Gems</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url(silky.jpg);
+      background-size: cover;
+      background-position: center;
+      color: beige;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      width: 90vw;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      width: 70px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .home {
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .home:hover {
+      text-decoration: underline;
+      color: #edbb4c;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .dropbtn:hover {
+      color: #edbb4c;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #23524a;
+      border-radius: 5px;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      text-decoration: none;
+      color: beige;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #6b8d5a;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    .title {
+      grid-column: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      text-align: left;
+      animation: slideUp 1s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .title h1.yellow {
+      font-size: 8vw;
+      margin: 0;
+      line-height: 1;
+      color: #edbb4c;
+    }
+
+    .hollow h1 {
+      font-size: 8vw;
+      margin: 0;
+      line-height: 1;
+      -webkit-text-stroke: 2px rgb(255, 254, 237);
+      color: transparent;
+    }
+
+    .title p {
+      font-size: 1.5vw;
+      font-weight: bold;
+      color: rgba(229, 229, 213, 0.715);
+    }
+
+    .bannerimg {
+      grid-column: 3 / 5;
+      height: 650px;
+      width: 650px;
+      background: linear-gradient(to top left, #23524a, #edba4c9c);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .bannerimg img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .about, .contact {
+      grid-column: 1 / -1;
+      background-color: rgba(117, 117, 117, 0.416);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-top: 2rem;
+      color: beige;
+      animation: fadeIn 2s ease;
+    }
+
+    .about h2, .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #edbb4c;
+    }
+
+    .about p, .contact p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .contact ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .contact li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .contact a {
+      color: #edbb4c;
+      text-decoration: none;
+      transition: text-decoration 0.3s ease;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .dropbtn,
+      .dropdown-content a,
+      .home {
+        font-size: 1.2rem;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .title,
+      .bannerimg,
+      .about,
+      .contact {
+        grid-column: 1 / -1;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .title h1.yellow,
+      .hollow h1 {
+        font-size: 12vw;
+      }
+
+      .title p {
+        font-size: 4vw;
+      }
+
+      .bannerimg {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <header>
+      <div class="nav-left">
+        <img src="logo.png" alt="JJH Gems Logo" class="logo" />
+        <div class="home">Home</div>
+        <div class="dropdown">
+          <button class="dropbtn">Categories</button>
+          <div class="dropdown-content">
+            <a href="#">Gold</a>
+            <a href="#">Silver</a>
+            <a href="#">Pearl</a>
+            <a href="#">Other Materials</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <!-- Icons can go here -->
+      </div>
+    </header>
+
+    <main>
+      <div class="title">
+        <h1 class="yellow">JJH</h1>
+        <div class="hollow">
+          <h1>Gems</h1>
+        </div>
+        <p>Founded on a passion for exceptional design and ethical sourcing, JJH Gems partners with trusted artisans and global brands to bring you jewelry that celebrates individuality and heritage. Whether you're searching for a statement piece or a subtle everyday accent, our collection is designed to elevate your style and honor your moments.</p>
+      </div>
+
+      <div class="bannerimg">
+        <img src="cartier.png" alt="Main Banner" />
+      </div>
+
+      <section class="about">
+        <h2>About Us</h2>
+        <p>
+          Hi, We're the team behind JJH Jewelry, and we love jewelry as much as you do!
+          Remember that feeling of finding a hidden treasure? That's the feeling we chase every day at JJH Gems.
+          We started this business investing in finding the nicest jewelry finds because we believe everyone deserves
+          to own beautiful, high-quality jewelry without breaking the bank.
+
+          The problem we solved was simple: finding unique, reliable, and affordable pre-owned jewelry could be a challenge.
+          We wanted to create a welcoming, trustworthy space where you could find that perfect, special piece you'll cherish
+          for years to come. We're real people, passionate about helping you find something that makes you feel special.
+          Stop by and say hello, or start browsing our latest finds today! :)
+        </p>
+      </section>
+
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Reach out with questions, custom requests, or collaborations.</p>
+        <ul>
+          <li>Email: <a href="mailto:jjhjewelry@gmail.com">jjhjewelry@gmail.com</a></li>
+          <li>Phone: +965 1234 5678</li>
+          <li>Instagram: <a href="https://instagram.com/jjhjewelry" target="_blank">@jjhjewelry</a></li>
+        </ul>
