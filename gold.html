@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floral & Stone Gold Bangle</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url('silky.jpg');
+      background-size: cover;
+      background-position: center;
+      color: beige;
+      padding: 2rem;
+    }
+
+    .product-card {
+      max-width: 400px;
+      margin: auto;
+      background-color: rgba(117, 117, 117, 0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .image-gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      max-height: 220px; /* Slightly taller than before */
+      border-bottom: 1px solid #edbb4c;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-info h2 {
+      font-size: 1.2rem;
+      color: #edbb4c;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .product-info p {
+      font-size: 0.95rem;
+      margin: 0.4rem 0;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+    }
+
+    .product-info p strong {
+      color: #edbb4c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-card">
+    <div class="image-gallery">
+        <img src="https://i.ibb.co/xtfY9hhd/20250901-193649.jpg" alt="Bracelet Image 3" />
+      <img src="https://i.ibb.co/nXF0K6R/20250901-193632.jpg" alt="Bracelet Image 1" />
+      <img src="https://i.ibb.co/3DJkMNV/20250901-193732.jpg" alt="Bracelet Image 2" />
+      
+    </div>
+    <div class="product-info">
+      <h2>Floral & Stone Gold Bangle Collection</h2>
+      <p><strong>Price:</strong> KWD </p>
+      <p><strong>Material:</strong>  Yellow Gold</p>
+      <p><strong>Weight:</strong> 15g</p>
+      <p><strong>Length:</strong> 7 inches</p>
+    </div>
+  </div>
+
+</body>
+</html>
