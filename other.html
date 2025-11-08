@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JJH Gems – Gold Collection</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url('silky.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: beige;
+      padding: 1rem;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 70px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .home {
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      text-decoration: none;
+      color: beige;
+    }
+
+    .home:hover {
+      text-decoration: underline;
+      color: #edbb4c;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .dropbtn:hover {
+      color: #edbb4c;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #23524a;
+      border-radius: 5px;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      text-decoration: none;
+      color: beige;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #6b8d5a;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .product-section {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: rgba(117, 117, 117, 0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .image-gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      height: 220px;
+      border-bottom: 1px solid #edbb4c;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: 100%;
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-info h2 {
+      font-size: 1.2rem;
+      color: #edbb4c;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .product-info p {
+      font-size: 0.95rem;
+      margin: 0.4rem 0;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+    }
+
+    .product-info p strong {
+      color: #edbb4c;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .dropbtn,
+      .dropdown-content a,
+      .home {
+        font-size: 1.2rem;
+      }
+      
+      .product-section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .dropbtn,
+      .dropdown-content a,
+      .home {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="nav-left">
+  <img src="logo.png" alt="JJH Gems Logo" class="logo" />
+  <a href="index.html" class="home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+      <a href="gold.html">Gold</a>
+      <a href="silver.html">Silver</a>
+      <a href="#">Pearl</a>
+      <a href="other.html">Other Materials</a>
+    </div>
+  </div>
+</div>
+  </header>
+  
+  <section class="product-section">
+    <!-- Card 1 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/k6WG6kGM/20250901-193145.jpg" alt="Floral & Stone Gold Bangle - front view" />
+        <img src="https://i.ibb.co/yBxMkPNK/20250901-193129.jpg" alt="Floral & Stone Gold Bangle - side view" />
+      </div>
+      <div class="product-info">
+        <h2>Floral & Stone Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD 20</p>
+        <p><strong>Material:</strong> 18K Yellow Gold with Cubic Zirconia</p>
+        <p><strong>Weight:</strong> Approx. 15g</p>
+        <p><strong>Length:</strong> 7 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/MyyYcBfr/20250901-193022.jpg" alt="Brushed Gold Bangle - front view" />
+        <img src="https://i.ibb.co/ZpmWp4JX/20250901-193032.jpg" alt="Brushed Gold Bangle - side view" />
+        <img src="https://i.ibb.co/xqsY0S5t/20250901-192855.jpg" alt="Brushed Gold Bangle - detail view" />
+      </div>
+      <div class="product-info">
+        <h2>Brushed Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> 21K Brushed Yellow Gold</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/Rp29FcNs/20250901-192823.jpg" alt="Polished Gold Bangle - front view" />
+        <img src="https://i.ibb.co/0yGpxDdh/20250901-192815.jpg" alt="Polished Gold Bangle - side view" />
+      </div>
+      <div class="product-info">
+        <h2>Polished Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> 21K High-Gloss Yellow Gold</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/0ptXMk6B/20250901-192352.jpg" alt="Hammered Texture Bangle - front view" />
+        <img src="https://i.ibb.co/ns0bzR9B/20250901-192335.jpg" alt="Hammered Texture Bangle - side view" />
+      </div>
+      <div class="product-info">
+        <h2>Hammered Texture Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> 21K Hammered Yellow Gold</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/6ccQcrGN/20250901-192225.jpg" alt="Satin Finish Gold Bangle - front view" />
+        <img src="https://i.ibb.co/r2BgLVWv/20250901-192228.jpg" alt="Satin Finish Gold Bangle - side view" />
+        <img src="https://i.ibb.co/DfgyB06x/20250901-192252.jpg" alt="Satin Finish Gold Bangle - detail view" />
+      </div>
+      <div class="product-info">
+        <h2>Satin Finish Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> 21K Satin-Finish Yellow Gold</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/f6G60Kt/20250901-192154.jpg" alt="Textured Gold Bangle - front view" />
+        <img src="https://i.ibb.co/5gDstDt8/20250901-192150.jpg" alt="Textured Gold Bangle - side view" />
+      </div>
+      <div class="product-info">
+        <h2>Textured Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> 21K Textured Yellow Gold</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/1twd4LPY/20250901-190935.jpg" alt="Geometric Gold Bangle - front view" />
+        <img src="https://i.ibb.co/1YcH2CK7/20250901-190949.jpg" alt="Geometric Gold Bangle - side view" />
+        <img src="https://i.ibb.co/60cc9Z7K/20250901-190927.jpg" alt="Geometric Gold Bangle - detail view" />
+      </div>
+      <div class="product-info">
+        <h2>Geometric Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/TpFJQDY/20250901-191023.jpg" alt="Curved Gold Bangle - front view" />
+        <img src="https://i.ibb.co/B2pG7nyM/20250901-191055.jpg" alt="Curved Gold Bangle - side view" />
+      </div>
+      <div class="product-info">
+        <h2>Curved Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/mrMkpcpg/20250901-191114.jpg" alt="Classic Gold Bangle - front view" />
+      </div>
+      <div class="product-info">
+        <h2>Classic Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/yr1LN2y/20250901-191718.jpg" alt="Twisted Gold Bangle - front view" />
+        <img src="https://i.ibb.co/TydwDkC/20250901-191722.jpg" alt="Twisted Gold Bangle - side view" />
+        <img src="https://i.ibb.co/zh71gjWZ/20250901-191753.jpg" alt="Twisted Gold Bangle - detail view" />
+      </div>
+      <div class="product-info">
+        <h2>Twisted Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/sJ6KHYSy/20250901-191828.jpg" alt="Modern Gold Bangle - front view" />
+        <img src="https://i.ibb.co/mFDx3VNr/20250901-191841.jpg" alt="Modern Gold Bangle - side view" />
+        <img src="https://i.ibb.co/v4SMhP4N/20250901-191845.jpg" alt="Modern Gold Bangle - detail view" />
+      </div>
+      <div class="product-info">
+        <h2>Modern Gold Bangle</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="product-card">
+      <div class="image-gallery">
+        <img src="https://i.ibb.co/mrVvw7hQ/20250901-191948.jpg" alt="Unknown - front view" />
+        <img src="https://i.ibb.co/PzNFYyNC/20250901-192017.jpg" alt="Unknown - side view" />
+        <img src="https://i.ibb.co/60cc9Z7K/20250901-190927.jpg" alt="Unknown - detail view" />
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       <img src="https://i.ibb.co/RkWfSRTB/20250901-185252.jpg" alt="20250901-185252" border="0">
+<img src="https://i.ibb.co/TxCfHpxw/20250901-185303.jpg" alt="20250901-185303" border="0">
+<img src="https://i.ibb.co/0Vrz62xw/20250901-185333.jpg" alt="20250901-185333" border="0">
+<img src="https://i.ibb.co/rRPLhtMY/20250901-185339.jpg" alt="20250901-185339" border="0">
+<img src="https://i.ibb.co/Zpkx2M9C/20250901-185350.jpg" alt="20250901-185350" border="0">
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+<!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       <img src="https://i.ibb.co/b5Fp63fm/20250901-185456.jpg" alt="20250901-185456" border="0">
+<img src="https://i.ibb.co/Z1b4tdPd/20250901-185526.jpg" alt="20250901-185526" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       <img src="https://i.ibb.co/ZCnMBTb/20250901-185530.jpg" alt="20250901-185530" border="0">
+<img src="https://i.ibb.co/PsZkVmq9/20250901-185627.jpg" alt="20250901-185627" border="0">
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/tptQ2bjb/20250901-185653.jpg" alt="20250901-185653" border="0">
+<img src="https://i.ibb.co/r2kryVgP/20250901-185705.jpg" alt="20250901-185705" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/RTn61QQG/20250901-185736.jpg" alt="20250901-185736" border="0">
+<img src="https://i.ibb.co/ymLYyNKP/20250901-185822.jpg" alt="20250901-185822" border="0">
+<img src="https://i.ibb.co/1tCYXYRm/20250901-185829.jpg" alt="20250901-185829" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/bjV9x8wQ/20250901-185955.jpg" alt="20250901-185955" border="0">
+<img src="https://i.ibb.co/2YFpCrv0/20250901-190001.jpg" alt="20250901-190001" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/sv9YN5SN/20250901-190039.jpg" alt="20250901-190039" border="0">
+<img src="https://i.ibb.co/hFW8vykC/20250901-190114.jpg" alt="20250901-190114" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/CpNmpmt0/20250901-190218.jpg" alt="20250901-190218" border="0">
+<img src="https://i.ibb.co/C3Ss9ZW5/20250901-190242.jpg" alt="20250901-190242" border="0">
+<img src="https://i.ibb.co/R4jnbhjk/20250901-190247.jpg" alt="20250901-190247" border="0">
+<img src="https://i.ibb.co/4Rmz9p4v/20250901-190258.jpg" alt="20250901-190258" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/hx3HxPZw/20250901-190346.jpg" alt="20250901-190346" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/TBSgZv9q/20250901-190503.jpg" alt="20250901-190503" border="0">
+<img src="https://i.ibb.co/20LXL6Ft/20250901-190525.jpg" alt="20250901-190525" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/XrbyxNqH/20250901-190557.jpg" alt="20250901-190557" border="0">
+<img src="https://i.ibb.co/5gNWTbfb/20250901-190612.jpg" alt="20250901-190612" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/chfcyjZk/20250901-190641.jpg" alt="20250901-190641" border="0">
+<img src="https://i.ibb.co/tpK2twbt/20250901-190651.jpg" alt="20250901-190651" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+
+<img src="https://i.ibb.co/mrDLV7kZ/20250901-190733.jpg" alt="20250901-190733" border="0">
+<img src="https://i.ibb.co/5Wx6X12W/20250901-190742.jpg" alt="20250901-190742" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+    <!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+
+<img src="https://i.ibb.co/1YmzdYD9/20250901-190816.jpg" alt="20250901-190816" border="0">
+<img src="https://i.ibb.co/ksBTpdGY/20250901-190854.jpg" alt="20250901-190854" border="0">
+
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+  
+<!-- Card -- -->
+    <div class="product-card">
+      <div class="image-gallery">
+       
+<img src="https://i.ibb.co/tpZBKwmw/20250901-193225.jpg" alt="20250901-193225" border="0">
+<img src="https://i.ibb.co/Q3stRX02/20250901-193229.jpg" alt="20250901-193229" border="0">
+<img src="https://i.ibb.co/VWXcSQGB/20250901-193309.jpg" alt="20250901-193309" border="0">
+      </div>
+      <div class="product-info">
+        <h2>Unknown</h2>
+        <p><strong>Price:</strong> KWD Unknown</p>
+        <p><strong>Material:</strong> Unknown</p>
+        <p><strong>Weight:</strong> Approx. 12g</p>
+        <p><strong>Length:</strong> 6.5 inches</p>
+      </div>
+    </div>
+</section>
+</body>
+</html>
